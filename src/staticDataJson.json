@@ -1,0 +1,370 @@
+{
+  "dataFooter": {
+    "col_0": {
+      "logo": "/imgs/logo/logo.png",
+      "logoDark": "/imgs/logo-dark.png",
+      "shortText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati culpa assumenda voluptas placeat amet consectetur adipisicing elit. Obcaecati culpa assumenda voluptas placeat.",
+      "btnSocialMedia": [
+        {
+          "link": "/",
+          "label": "facebook"
+        },
+        {
+          "link": "/",
+          "label": "instagram"
+        },
+        {
+          "link": "/",
+          "label": "linkedin"
+        },
+        {
+          "link": "/",
+          "label": "twitter"
+        }
+      ]
+    },
+    "col_1": {
+      "title": "Information",
+      "links": [
+        {
+          "text": "Home",
+          "link": "/"
+        },
+        {
+          "text": "About Us",
+          "link": "/"
+        },
+        {
+          "text": "Privacy Policy",
+          "link": "/"
+        },
+        {
+          "text": "Frequently Question",
+          "link": "/"
+        },
+        {
+          "text": "Order Tracking",
+          "link": "/"
+        },
+        {
+          "text": "Compare",
+          "link": "/"
+        }
+      ]
+    },
+    "col_2": {
+      "title": "Your account",
+      "links": [
+        {
+          "text": "My Account",
+          "link": "/"
+        },
+        {
+          "text": "Cart",
+          "link": "/"
+        },
+        {
+          "text": "Whishlist",
+          "link": "/"
+        },
+        {
+          "text": "pyments",
+          "link": "/"
+        },
+        {
+          "text": "Payments",
+          "link": "/"
+        },
+        {
+          "text": "purchases",
+          "link": "/"
+        }
+      ]
+    },
+    "col_3": {
+      "title": "NEWSLETTER"
+    }
+  },
+  "subFooter": {
+    "copyRight": "© CopyRight 2023",
+    "bussinessName": "AndShop",
+    "img": "/imgs/common/payment.png"
+  },
+  "dataAuthor": {
+    "name": "Verastian"
+  },
+  "dataMenu": {
+    "logo": "/imgs/logo/logo.png",
+    "logoDark": "/imgs/logo-dark.png",
+    "menu": [
+      {
+        "link": "/",
+        "label": "Home",
+        "submenu": []
+      },
+      {
+        "link": "/products/store",
+        "label": "store",
+        "submenu": []
+      },
+      {
+        "link": "",
+        "label": "categories",
+        "submenu": [
+          {
+            "link": "/gender/men",
+            "label": "Men"
+          },
+          {
+            "link": "/gender/women",
+            "label": "Women"
+          },
+          {
+            "link": "/gender/kid",
+            "label": "kid"
+          }
+        ]
+      },
+      {
+        "link": "/about",
+        "label": "about us",
+        "submenu": []
+      }
+    ]
+  },
+  "dataSidebar": {
+    "title": "",
+    "commerceInfo": {
+      "logo": "/imgs/logo/logo.png",
+      "logoDark": "/imgs/logo-dark.png",
+      "shortText": "Your address goes here.  0123456789, 0123456789  demo@example.com",
+      "btnSocialMedia": [
+        {
+          "link": "/",
+          "label": "facebook"
+        },
+        {
+          "link": "/",
+          "label": "instagram"
+        },
+        {
+          "link": "/",
+          "label": "linkedin"
+        },
+        {
+          "link": "/",
+          "label": "twitter"
+        }
+      ]
+    },
+    "redirect": [
+      {
+        "text": "Whishlist",
+        "link": "/"
+      },
+      {
+        "text": "Cart",
+        "link": "/"
+      },
+      {
+        "text": "Checkout",
+        "link": "/"
+      }
+    ],
+    "nav": [
+      {
+        "text": "profile",
+        "link": "/profile",
+        "icon": "user",
+        "rol": ["admin", "user"],
+        "order": 1
+      },
+      {
+        "text": "sign in",
+        "link": "/auth/login",
+        "icon": "login",
+        "rol": ["admin", "user", ""],
+        "order": 2
+      },
+      {
+        "text": "logout",
+        "link": "/auth/log",
+        "icon": "logout",
+        "rol": ["admin", "user"],
+        "order": 2
+      },
+      {
+        "text": "my orders",
+        "link": "/orders",
+        "icon": "ticket",
+        "rol": ["admin", "user"],
+        "order": 3
+      },
+      {
+        "text": "orders",
+        "link": "/admin/orders",
+        "icon": "ticket",
+        "rol": ["admin"],
+        "order": 6
+      },
+      {
+        "text": "products",
+        "link": "/admin/products",
+        "icon": "product",
+        "rol": ["admin"],
+        "order": 5
+      },
+      {
+        "text": "purchases",
+        "link": "/purchases",
+        "icon": "bag",
+        "rol": ["admin", "user"],
+        "order": 4
+      },
+      {
+        "text": "users",
+        "link": "/admin/users",
+        "icon": "users",
+        "rol": ["admin"],
+        "order": 7
+      }
+    ]
+  },
+  "dataMovil": {
+    "navMovil": [
+      {
+        "label": "sign in",
+        "link": "/auth/login",
+        "icon": "login",
+        "rol": ["admin", "user", ""],
+        "submenu": [],
+        "order": 1
+      },
+      {
+        "label": "logout",
+        "link": "/auth/log",
+        "icon": "logout",
+        "rol": ["admin", "user"],
+        "submenu": [],
+        "order": 1
+      },
+
+      {
+        "label": "my profile",
+        "link": "",
+        "icon": "user",
+        "rol": ["admin", "user"],
+        "order": 5,
+        "submenu": [
+          {
+            "label": "profile",
+            "link": "/profile",
+            "icon": "user",
+            "rol": ["admin", "user"],
+            "order": 1,
+            "submenu": []
+          },
+          {
+            "label": "my orders",
+            "link": "/orders",
+            "icon": "ticket",
+            "rol": ["admin", "user"],
+            "order": 2,
+            "submenu": []
+          }
+        ]
+      },
+      {
+        "link": "",
+        "label": "settings",
+        "icon": "settings",
+        "rol": ["admin", "user"],
+        "order": 6,
+        "submenu": [
+          {
+            "label": "orders",
+            "link": "/admin/orders",
+            "icon": "ticket",
+            "rol": ["admin"],
+            "order": 1
+          },
+          {
+            "label": "products",
+            "link": "/admin/products",
+            "icon": "product",
+            "rol": ["admin"],
+            "order": 2
+          },
+          {
+            "label": "purchases",
+            "link": "/purchases",
+            "icon": "bag",
+            "rol": ["admin", "user"],
+            "order": 3
+          },
+          {
+            "label": "users",
+            "link": "/admin/users",
+            "icon": "users",
+            "rol": ["admin"],
+            "order": 4
+          }
+        ]
+      },
+      {
+        "link": "/",
+        "label": "Home",
+        "icon": "home",
+        "rol": ["admin", "user"],
+        "order": 1,
+        "submenu": []
+      },
+      {
+        "link": "/products/store",
+        "label": "store",
+        "icon": "store",
+        "rol": ["admin", "user"],
+        "order": 2,
+        "submenu": []
+      },
+      {
+        "link": "",
+        "label": "categories",
+        "icon": "categories",
+        "rol": ["admin", "user"],
+        "order": 3,
+        "submenu": [
+          {
+            "link": "/gender/men",
+            "label": "Men",
+            "icon": "",
+            "rol": ["admin", "user"],
+            "order": 1
+          },
+          {
+            "link": "/gender/women",
+            "label": "Women",
+            "icon": "",
+            "rol": ["admin", "user"],
+            "order": 2
+          },
+          {
+            "link": "/gender/kid",
+            "label": "kid",
+            "icon": "",
+            "rol": ["admin", "user"],
+            "order": 3
+          }
+        ]
+      },
+      {
+        "link": "/about",
+        "label": "about us",
+        "icon": "about",
+        "rol": ["admin", "user"],
+        "order": 4,
+        "submenu": []
+      }
+    ]
+  }
+}

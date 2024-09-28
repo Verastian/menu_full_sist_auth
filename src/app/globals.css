@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #274494;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@layer base {
+  input,
+  button,
+  select,
+  textarea {
+    @apply appearance-none border-none bg-transparent outline-none;
+  }
+
+  /* Opcional: Estilos adicionales para eliminar padding o margin */
+  input,
+  button,
+  select,
+  textarea {
+    @apply p-0 m-0;
+  }
+}
+
+@layer components {
+  input:not(:placeholder-shown) {
+    @apply bg-inherit; /* O cualquier otra clase de Tailwind que prefieras */
+  }
+}
+
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-800 text-white py-4 px-4 rounded 
+  transition-all uppercase font-semibold;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded transition-all;
+}
+
+.btn-disabled {
+  @apply bg-gray-600 text-white py-4 px-4 rounded transition-all  uppercase font-semibold;
+}
+
+.btn-danger {
+  @apply bg-red-500 hover:bg-red-700 text-white py-2 px-4 transition-all;
+}
+.primary-link {
+  @apply text-orange-600 font-normal transition-all duration-300 ease-in-out tracking-wide;
+  border-bottom: 2px solid transparent;
+}
+.primary-link:hover {
+  @apply text-orange-500 border-orange-400;
+}
+.orange-group{
+  @apply text-orange-500 border-orange-400 group-hover:text-orange-400 group-hover:border-orange-300
+}
+.orange{
+  @apply text-orange-500 border-orange-400 hover:text-orange-400 hover:border-orange-300
+}
+
+.bg-back-blur {
+  @apply bg-[hsla(0,0%,100%,0.65)]  
+  shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] 
+  backdrop-blur-[25px] 
+  dark:bg-[hsla(0,0%,5%,0.5)]
+   dark:shadow-black/20;
+}
+
+/* Animaciones de rotación para el efecto 3D botón selector de tema utilizando backface*/
+@layer utilities {
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .rotate-y-0 {
+    transform: rotateY(0deg);
+  }
+  .card-inner {
+    transform-style: preserve-3d;
+  }
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+  }
+}

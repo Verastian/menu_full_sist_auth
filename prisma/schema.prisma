@@ -1,0 +1,104 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+model User {
+  id               String      @id @default(uuid())
+  email            String      @unique
+  emailVerified    DateTime?
+  passwordHash     String
+  lastLogin        DateTime?
+  image            String?
+  rol              Role        @default(user)
+  resetToken       String?     @unique
+  resetTokenExpiry DateTime?
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+  workbenches      Workbench[]
+  notes            Note[]
+
+  @@map("users")
+}
+
+model Workbench {
+  id        String   @id @default(uuid())
+  name      String
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  notes     Note[]
+
+  @@map("workbenches")
+}
+
+model Note {
+  id             String          @id @default(uuid())
+  name           String
+  workbenchId    String
+  workbench      Workbench       @relation(fields: [workbenchId], references: [id])
+  userId         String
+  user           User            @relation(fields: [userId], references: [id])
+  parentId       String?
+  parent         Note?           @relation("NoteToNote", fields: [parentId], references: [id])
+  children       Note[]          @relation("NoteToNote")
+  type           String
+  color          String
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  content        NoteContent?
+  quiz           Quiz?
+  revisionAlarms RevisionAlarm[]
+
+  @@map("notes")
+}
+
+model NoteContent {
+  id             String @id @default(uuid())
+  noteId         String @unique
+  note           Note   @relation(fields: [noteId], references: [id])
+  mainContent    String
+  ideasContent   String
+  whenContent    String
+  summaryContent String
+
+  @@map("note_contents")
+}
+
+model Quiz {
+  id          String    @id @default(uuid())
+  noteId      String    @unique
+  note        Note      @relation(fields: [noteId], references: [id])
+  questions   Json
+  answers     Json
+  completed   Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  completedAt DateTime?
+
+  @@map("quizzes")
+}
+
+model RevisionAlarm {
+  id            String   @id @default(uuid())
+  noteId        String
+  note          Note     @relation(fields: [noteId], references: [id])
+  alarmTime     DateTime
+  completed     Boolean  @default(false)
+  revisionCount Int      @default(0)
+
+  @@map("revision_alarms")
+}
+
+enum Role {
+  user
+  admin
+}
